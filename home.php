@@ -35,17 +35,33 @@ $result = mysqli_query($db, "SELECT * FROM salary WHERE login_id=".$_SESSION['id
 					   <b>Danny's Wholesaler</b>
 					</a>
 				</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<li>
-					<a class="btn btn-sm btn-outline-dark" href="view.php">Employee<span class="sr-only">(current)</span></a>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Employee</a>
+					<div class="dropdown-menu">
+					  <a class="dropdown-item" href="add.php">Add Employee</a>
+					  <a class="dropdown-item" href="view.php">View Employee</a>
+					</div>
 				</li>&nbsp;&nbsp;&nbsp;
-				<li>
-					<a class="btn btn-sm btn-outline-dark" href="viewcost.php">Costumer<span class="sr-only">(current)</span></a>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customer</a>
+						<div class="dropdown-menu">
+						  <a class="dropdown-item" href="addcost.php">Add Customer</a>
+						  <a class="dropdown-item" href="viewcost.php">View Customer</a>
+						</div>
 				</li>&nbsp;&nbsp;&nbsp;
-				<li>
-					<a class="btn btn-sm btn-outline-dark" href="viewitem.php">Item<span class="sr-only">(current)</span></a>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Item</a>
+						<div class="dropdown-menu">
+						  <a class="dropdown-item" href="additem.php">Add Item</a>
+						  <a class="dropdown-item" href="viewitem.php">View Item</a>
+						</div>
 				</li>&nbsp;&nbsp;&nbsp;
-				<li>
-					<a class="btn btn-sm btn-outline-dark" href="viewsalary.php">Salary<span class="sr-only">(current)</span></a>
+					<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Salary</a>
+						<div class="dropdown-menu">
+						  <a class="dropdown-item" href="addsalary.php">Add Salary</a>
+						  <a class="dropdown-item" href="viewsalary.php">View Salary</a>
+						</div>
 				</li>&nbsp;&nbsp;&nbsp;
 				<li>
 					<a class="btn btn-sm btn-outline-dark" href="viewreports.php">Reports<span class="sr-only">(current)</span></a>

@@ -28,11 +28,8 @@ if(!isset($_SESSION['valid'])) {
 	  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 		  <li class="nav-item active">
-			<a class="btn btn-sm btn-outline-dark" href="viewitem.php">Home <span class="sr-only">(current)</span></a>
+			<a class="btn btn-sm btn-outline-dark" href="home.php">Home <span class="sr-only">(current)</span></a>
 		  </li>&nbsp;&nbsp;&nbsp;
-		  <li class="nav-item">
-			<a class="btn btn-sm btn-outline-dark" href="additem.php">Add</a>
-		  </li>
 		</ul>
 	  </div>
 	</nav>
@@ -59,15 +56,10 @@ if(!isset($_SESSION['valid'])) {
 		<div class="col-sm-4 col-form-label">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="viewitem.php">View Item</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Add Item</li>
 			</ol>
 		</div>
 	</nav>
-<<<<<<< HEAD
-<div class="jumbotron col-sm-5" style="background-color:skyblue">
-=======
 <div class="jumbotron col-sm-4" style="background-color:skyblue">
->>>>>>> added table  to the item
 	<form action="additem.php" method="post" name="additem">
 		<div class="form-group row">
 			<label for="colFormLabel" class="col-sm-4 col-form-label"><h5>Description:</h5></label>

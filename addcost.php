@@ -62,11 +62,7 @@ if(isset($_POST['Submit'])) {
 			</ol>
 		</div>
 	</nav>
-<<<<<<< HEAD
-<div class="jumbotron col-sm-5" style="background-color:skyblue">
-=======
 <div class="jumbotron col-sm-6" style="background-color:skyblue">
->>>>>>> added table  to the item
 	<form action="addcost.php" method="post" name="addcostumer">
 		<div class="form-group row">
 			<label for="colFormLabel" class="col-sm-4 col-form-label"><h5>Firstname:</h5></label>

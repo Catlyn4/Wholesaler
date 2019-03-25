@@ -61,31 +61,8 @@ if(isset($_POST['Submit'])) {
 			</ol>
 		</div>
 	</nav>
-<<<<<<< HEAD
-<div class="jumbotron col-sm-3" style="background-color:skyblue">
-	<form action="viewsalary.php" method="post" name="addsalary">
-		<div class="form-group row">
-			<label for="colFormLabel" class="col-sm-4 col-form-label"><h5>Salary:</h5></label>
-				<div class="col-sm-9">
-					<input type="decimal" name="salary" class="form-control" id="colFormLabel" required>
-				</div>
-		</div>
-		<div class="form-group row">
-			<label for="colFormLabel" class="col-sm-4 col-form-label"><h5>Date:</h5></label>
-				<div class="col-sm-9">
-					<input type="date" name="date" class="form-control" id="colFormLabel" required>
-				</div>
-		</div>
-		<div class="form-group row">
-			<label for="colFormLabel" class="col-sm-4 col-form-label"><h5>Remarks:</h5></label>
-				<div class="col-sm-9">
-					<input type="text" name="remarks" class="form-control" id="colFormLabel" required>
-				</div>
-		</div>
-=======
 <div class="jumbotron col-sm-4" style="background-color:skyblue">
 	<form action="addsalary.php" method="post" name="addsalary">
->>>>>>> added table  to the item
 		<div class="form-group row">
 			<label for="colFormLabel" class="col-sm-5 col-form-label"><h5>Emp Id:</h5></label>
 				<div class="col-sm-7">
