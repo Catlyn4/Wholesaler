@@ -45,7 +45,11 @@ $result = mysqli_query($db, "SELECT * FROM item WHERE login_id=".$_SESSION['id']
 <br/>
 <div class="container-fluid">
 	<div class="row">
+<<<<<<< HEAD
 		<div class="col-sm-6">
+=======
+		<div class="col-sm-12">
+>>>>>>> add salestable,itemtable,sales_item table
 			<table class="table table-dark table-bordered table-hover">
 				<tr bgcolor='green'>	
 					<td>Description</td>
@@ -66,6 +70,7 @@ $result = mysqli_query($db, "SELECT * FROM item WHERE login_id=".$_SESSION['id']
 			?>
 			<tbody>
 			</table>
+<<<<<<< HEAD
 		</div>
 		<div class="col-sm-6">
 			<table class="table table-dark table-bordered table-hover">
@@ -88,6 +93,8 @@ $result = mysqli_query($db, "SELECT * FROM item WHERE login_id=".$_SESSION['id']
 			?>
 			<tbody>
 			</table>
+=======
+>>>>>>> add salestable,itemtable,sales_item table
 		</div>
 	</div>
 </div>

@@ -36,9 +36,6 @@ $result = mysqli_query($db, "SELECT salary.salary_id,employee.firstname, employe
 		  <li class="nav-item active">
 			<a class="btn btn-sm btn-outline-dark" href="home.php">Home <span class="sr-only">(current)</span></a>
 		  </li>&nbsp;&nbsp;&nbsp;
-		  <li class="nav-item">
-			<a class="btn btn-sm btn-outline-dark" href="addsalary.php">Add</a>
-		  </li>
 		</ul>
 	</div>
 </nav>

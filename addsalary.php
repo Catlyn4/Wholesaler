@@ -28,7 +28,7 @@ if(!isset($_SESSION['valid'])) {
 	  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 		  <li class="nav-item active">
-			<a class="btn btn-sm btn-outline-dark" href="viewsalary.php">Home <span class="sr-only">(current)</span></a>
+			<a class="btn btn-sm btn-outline-dark" href="home.php">Home <span class="sr-only">(current)</span></a>
 		  </li>
 		</ul>
 	  </div>
