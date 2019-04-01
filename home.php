@@ -7,10 +7,15 @@ if(!isset($_SESSION['valid'])) {
 ?>
 
 <?php	include_once("connection.php");
+<<<<<<< HEAD
 $result = mysqli_query($db, "Select sales.sales_id,SUM(sales_item.quantity * sales_item.price) as total,date,firstname from sales,sales_item,items WHERE sales.sales_id = sales_item.sales_id AND items.item_id = sales_item.item_id GROUP BY sales_item.sales_id");
 
 <<<<<<< HEAD
 =======
+=======
+$result2 = mysqli_query($db, "Select sales.sales_id,SUM(sales_item.quantity * sales_item.price) as total,time_stamp,id from sales,sales_item,item WHERE sales.sales_id = sales_item.sales_id AND item.id = sales_item.item_id GROUP BY sales_item.sales_id");
+
+>>>>>>> add main function
 ?>
 >>>>>>> update button search
 
@@ -88,6 +93,7 @@ $result = mysqli_query($db, "Select sales.sales_id,SUM(sales_item.quantity * sal
 				<li class="nav-item dropdown">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Employee</a>
 =======
 					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Employee</a>
@@ -95,12 +101,16 @@ $result = mysqli_query($db, "Select sales.sales_id,SUM(sales_item.quantity * sal
 =======
 					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Employee</a>
 >>>>>>> update button search
+=======
+					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Employee</a>
+>>>>>>> add main function
 					<div class="dropdown-menu">
 					  <a class="dropdown-item" href="add.php">Add Employee</a>
 					  <a class="dropdown-item" href="view.php">View Employee</a>
 					</div>
 				</li>&nbsp;&nbsp;&nbsp;
 				<li class="nav-item dropdown">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customer</a>
@@ -110,12 +120,16 @@ $result = mysqli_query($db, "Select sales.sales_id,SUM(sales_item.quantity * sal
 =======
 					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customer</a>
 >>>>>>> update button search
+=======
+					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customer</a>
+>>>>>>> add main function
 						<div class="dropdown-menu">
 						  <a class="dropdown-item" href="addcost.php">Add Customer</a>
 						  <a class="dropdown-item" href="viewcost.php">View Customer</a>
 						</div>
 				</li>&nbsp;&nbsp;&nbsp;
 				<li class="nav-item dropdown">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Item</a>
@@ -125,12 +139,16 @@ $result = mysqli_query($db, "Select sales.sales_id,SUM(sales_item.quantity * sal
 =======
 					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Item</a>
 >>>>>>> update button search
+=======
+					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Item</a>
+>>>>>>> add main function
 						<div class="dropdown-menu">
 						  <a class="dropdown-item" href="additem.php">Add Item</a>
 						  <a class="dropdown-item" href="viewitem.php">View Item</a>
 						</div>
 				</li>&nbsp;&nbsp;&nbsp;
 					<li class="nav-item dropdown">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Salary</a>
@@ -140,6 +158,9 @@ $result = mysqli_query($db, "Select sales.sales_id,SUM(sales_item.quantity * sal
 =======
 					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Salary</a>
 >>>>>>> update button search
+=======
+					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Salary</a>
+>>>>>>> add main function
 						<div class="dropdown-menu">
 						  <a class="dropdown-item" href="addsalary.php">Add Salary</a>
 						  <a class="dropdown-item" href="viewsalary.php">View Salary</a>
@@ -167,13 +188,19 @@ $result = mysqli_query($db, "Select sales.sales_id,SUM(sales_item.quantity * sal
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-2">
+<<<<<<< HEAD
 			<div class="dropdown">
+=======
+>>>>>>> add main function
 				<button onclick="myFunction()" class="form-control">ITEMS</button>
 					<div id="myDropdown" class="dropdown-content">
 						<input type="text" placeholder="Search.." id="myInput" onkeyup="loadproducts()">
 					</div>
 			</div>
+<<<<<<< HEAD
 			</div>
+=======
+>>>>>>> add main function
 	<script>
 	function myFunction() {
 		document.getElementById("myDropdown").classList.toggle("show");
@@ -197,7 +224,11 @@ $result = mysqli_query($db, "Select sales.sales_id,SUM(sales_item.quantity * sal
 	</script>
 	</br>
 		<div class="col-sm-2">
+<<<<<<< HEAD
 			<select name="id" id="customer"  placeholder="id" class="form-control" required>
+=======
+			<select name="customer" id="customer"  placeholder="id" class="form-control" required>
+>>>>>>> add main function
 			<option>Customer</option>
 					<?php 
 						$sql = "SELECT * FROM costumer";
@@ -228,6 +259,10 @@ $result = mysqli_query($db, "Select sales.sales_id,SUM(sales_item.quantity * sal
 	<div class="row">
 		<div class="col-sm-4">
 			<table class="table table-dark table-bordered table-hover">
+<<<<<<< HEAD
+=======
+				<thead>
+>>>>>>> add main function
 				<tr bgcolor='green'>
 					<td>Item_id</td>
 					<td>Description</td>
@@ -235,17 +270,28 @@ $result = mysqli_query($db, "Select sales.sales_id,SUM(sales_item.quantity * sal
 					<td>Unit</td>
 					<td>Price</td>
 				</tr>
+<<<<<<< HEAD
 			<tbody>
+=======
+				</thead>
+			<tbody id="item">
+			</tbody>
+>>>>>>> add main function
 			</table>
 		</div>
 		<div class="col-sm-4">
 			<table class="table table-dark table-bordered table-hover">
+<<<<<<< HEAD
+=======
+				<thead>
+>>>>>>> add main function
 				<tr bgcolor='green'>
 					<td>Sales_ID</td>
 					<td>Time_Stamp</td>
 					<td>Cust_ID</td>
 					<td>Emp_ID</td>
 				</tr>
+<<<<<<< HEAD
 			<tbody>
 			<?php
 <<<<<<< HEAD
@@ -267,6 +313,18 @@ $result = mysqli_query($db, "Select sales.sales_id,SUM(sales_item.quantity * sal
 				echo "<td>".$res['total']."</td>";		
 			}?></tbody>
 >>>>>>> update button search
+=======
+				</thead>
+			<tbody id="">
+			<?php
+			while($res = mysqli_fetch_array($result2)) {		
+				echo "<tr>";
+				echo "<td>".$res['sales_id']."</td>";
+				echo "<td>".$res['id']."</td> ";
+				echo "<td>".$res['time_stamp']."</td>";
+				echo "<td>".$res['total']."</td>";		
+			}?></tbody>
+>>>>>>> add main function
 			
 			</table>
 		</div>
@@ -279,7 +337,11 @@ $result = mysqli_query($db, "Select sales.sales_id,SUM(sales_item.quantity * sal
 					<td>Price</td>
 					<td>Total</td>
 				</tr>
+<<<<<<< HEAD
 			<tbody>
+=======
+			<tbody id="salestable">
+>>>>>>> add main function
 			</table>
 			<center><input name="submit" class="add" type="submit" value="Add" /> </center>
 			</div>

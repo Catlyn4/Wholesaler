@@ -47,6 +47,7 @@ $result = mysqli_query($db, "SELECT * FROM item WHERE login_id=".$_SESSION['id']
 	<div class="row">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<div class="col-sm-6">
 =======
 		<div class="col-sm-12">
@@ -54,6 +55,9 @@ $result = mysqli_query($db, "SELECT * FROM item WHERE login_id=".$_SESSION['id']
 =======
 		<div class="col-sm-12">
 >>>>>>> update button search
+=======
+		<div class="col-sm-12">
+>>>>>>> add main function
 			<table class="table table-dark table-bordered table-hover">
 				<tr bgcolor='green'>	
 					<td>Description</td>
@@ -74,6 +78,7 @@ $result = mysqli_query($db, "SELECT * FROM item WHERE login_id=".$_SESSION['id']
 			?>
 			<tbody>
 			</table>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 		</div>
@@ -102,6 +107,8 @@ $result = mysqli_query($db, "SELECT * FROM item WHERE login_id=".$_SESSION['id']
 >>>>>>> add salestable,itemtable,sales_item table
 =======
 >>>>>>> update button search
+=======
+>>>>>>> add main function
 		</div>
 	</div>
 </div>
