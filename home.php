@@ -6,9 +6,13 @@ if(!isset($_SESSION['valid'])) {
 }
 ?>
 
-<?php	
-include_once("connection.php");
+<?php	include_once("connection.php");
+$result = mysqli_query($db, "Select sales.sales_id,SUM(sales_item.quantity * sales_item.price) as total,date,firstname from sales,sales_item,items WHERE sales.sales_id = sales_item.sales_id AND items.item_id = sales_item.item_id GROUP BY sales_item.sales_id");
 
+<<<<<<< HEAD
+=======
+?>
+>>>>>>> update button search
 
 ?>
 <?php
@@ -24,6 +28,50 @@ include_once("connection.php");
 	<script src="bootstrap-4.0.0-beta.3-dist/js/bootstrap.bundle.min.js"></script>
 	
 </head>
+<style>
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  border-box: box-sizing;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: left;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: left;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
 <body style="background-image:url('img/onion.jpg');" width="100%" alt="Responsive image">
 	<nav class="navbar navbar-expand-lg navbar-success">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,10 +87,14 @@ include_once("connection.php");
 				</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<li class="nav-item dropdown">
 <<<<<<< HEAD
+<<<<<<< HEAD
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Employee</a>
 =======
 					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Employee</a>
 >>>>>>> add salestable,itemtable,sales_item table
+=======
+					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Employee</a>
+>>>>>>> update button search
 					<div class="dropdown-menu">
 					  <a class="dropdown-item" href="add.php">Add Employee</a>
 					  <a class="dropdown-item" href="view.php">View Employee</a>
@@ -50,10 +102,14 @@ include_once("connection.php");
 				</li>&nbsp;&nbsp;&nbsp;
 				<li class="nav-item dropdown">
 <<<<<<< HEAD
+<<<<<<< HEAD
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customer</a>
 =======
 					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customer</a>
 >>>>>>> add salestable,itemtable,sales_item table
+=======
+					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Customer</a>
+>>>>>>> update button search
 						<div class="dropdown-menu">
 						  <a class="dropdown-item" href="addcost.php">Add Customer</a>
 						  <a class="dropdown-item" href="viewcost.php">View Customer</a>
@@ -61,10 +117,14 @@ include_once("connection.php");
 				</li>&nbsp;&nbsp;&nbsp;
 				<li class="nav-item dropdown">
 <<<<<<< HEAD
+<<<<<<< HEAD
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Item</a>
 =======
 					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Item</a>
 >>>>>>> add salestable,itemtable,sales_item table
+=======
+					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Item</a>
+>>>>>>> update button search
 						<div class="dropdown-menu">
 						  <a class="dropdown-item" href="additem.php">Add Item</a>
 						  <a class="dropdown-item" href="viewitem.php">View Item</a>
@@ -72,10 +132,14 @@ include_once("connection.php");
 				</li>&nbsp;&nbsp;&nbsp;
 					<li class="nav-item dropdown">
 <<<<<<< HEAD
+<<<<<<< HEAD
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Salary</a>
 =======
 					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Salary</a>
 >>>>>>> add salestable,itemtable,sales_item table
+=======
+					<a class="btn btn-sm btn-outline-success dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Salary</a>
+>>>>>>> update button search
 						<div class="dropdown-menu">
 						  <a class="dropdown-item" href="addsalary.php">Add Salary</a>
 						  <a class="dropdown-item" href="viewsalary.php">View Salary</a>
@@ -184,6 +248,7 @@ include_once("connection.php");
 				</tr>
 			<tbody>
 			<?php
+<<<<<<< HEAD
 				$sel_query="Select sales.sales_id,SUM(sales_item.quantity * sales_item.price) as total,time_stamp,cust_id from sales,sales_item,item WHERE sales.sales_id = sales_item.sales_id AND item.id = sales_item.item_id GROUP BY sales_item.sales_id";
 				$result = mysqli_query($db,$sel_query);
 				while($row = mysqli_fetch_assoc($result)) { ?>
@@ -193,6 +258,15 @@ include_once("connection.php");
 				<td align="center"><?php echo $row["time_stamp"]; ?></td></tr>
 			</tbody>
 	<?php  } ?>
+=======
+			while($res = mysqli_fetch_array($result)) {		
+				echo "<tr>";
+				echo "<td>".$res['sales_id']."</td>";
+				echo "<td>".$res['firstname']." ".$res['lastname']."</td> ";
+				echo "<td>".$res['time_stamp']."</td>";
+				echo "<td>".$res['total']."</td>";		
+			}?></tbody>
+>>>>>>> update button search
 			
 			</table>
 		</div>

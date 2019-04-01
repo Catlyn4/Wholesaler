@@ -46,10 +46,14 @@ $result = mysqli_query($db, "SELECT * FROM item WHERE login_id=".$_SESSION['id']
 <div class="container-fluid">
 	<div class="row">
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<div class="col-sm-6">
 =======
 		<div class="col-sm-12">
 >>>>>>> add salestable,itemtable,sales_item table
+=======
+		<div class="col-sm-12">
+>>>>>>> update button search
 			<table class="table table-dark table-bordered table-hover">
 				<tr bgcolor='green'>	
 					<td>Description</td>
@@ -70,6 +74,7 @@ $result = mysqli_query($db, "SELECT * FROM item WHERE login_id=".$_SESSION['id']
 			?>
 			<tbody>
 			</table>
+<<<<<<< HEAD
 <<<<<<< HEAD
 		</div>
 		<div class="col-sm-6">
@@ -95,6 +100,8 @@ $result = mysqli_query($db, "SELECT * FROM item WHERE login_id=".$_SESSION['id']
 			</table>
 =======
 >>>>>>> add salestable,itemtable,sales_item table
+=======
+>>>>>>> update button search
 		</div>
 	</div>
 </div>

@@ -12,12 +12,20 @@ if(isset($_POST['id'])){
 	
 	
 	$sql = "INSERT INTO sales(cust_id) VALUES($costumer)";
+<<<<<<< HEAD
 	$result = mysqli_query($connection,$sql);
+=======
+	$result = mysqli_query($db,$sql);
+>>>>>>> update button search
 	if($result == false){
 		echo "Something Went Wrong!";
 	}else{
 	$sql1 = "SELECT sales_id from sales order by sales_id desc LIMIT 1";
+<<<<<<< HEAD
 	$result1 = mysqli_query($connection,$sql1);
+=======
+	$result1 = mysqli_query($db,$sql1);
+>>>>>>> update button search
 	$row = mysqli_fetch_array($result1);
 	
 	for($i = 0; $i < count($_POST['id']); $i++){
@@ -25,6 +33,7 @@ if(isset($_POST['id'])){
 	}
 	$num=0;
 	while($num<count($_POST['id'])){
+<<<<<<< HEAD
 		$item_id1 = mysqli_real_escape_string($connection, $item_id[$num]);
 		$quantity1 = mysqli_real_escape_string($connection, $quantity[$num]);
 		$unit1 = mysqli_real_escape_string($connection, $unit[$num]);
@@ -33,6 +42,16 @@ if(isset($_POST['id'])){
 		
 		$insert = "INSERT INTO sales_item(sales_id,item_id,quantity,unit,price) VALUES($sales1,$item_id1,$quantity1,'$unit1','$price1')";
 		mysqli_query($connection, $insert);
+=======
+		$item_id1 = mysqli_real_escape_string($db, $item_id[$num]);
+		$quantity1 = mysqli_real_escape_string($db, $quantity[$num]);
+		$unit1 = mysqli_real_escape_string($db, $unit[$num]);
+		$price1 	= mysqli_real_escape_string($db, $price[$num]);
+		$sales1	= mysqli_real_escape_string($db, $sales[$num]);
+		
+		$insert = "INSERT INTO sales_item(sales_id,item_id,quantity,unit,price) VALUES($sales1,$item_id1,$quantity1,'$unit1','$price1')";
+		mysqli_query($db, $insert);
+>>>>>>> update button search
 		$num++;
 	}
 	
